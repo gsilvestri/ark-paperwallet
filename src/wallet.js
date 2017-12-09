@@ -12,9 +12,19 @@ angular.module('wallet', [])
         if (!passphrase) {
           passphrase = bip39.generateMnemonic()
         }
-
-        let networks = arkjs.networks
-        let ecpair = arkjs.ECPair.fromSeed(passphrase, networks.ark)
+        let kapuNetwork = 
+          {
+            network: {
+              messagePrefix: '\x18Kapu Signed Message:\n',
+              bip32: {
+                public: 0x2bf4968, // base58 will have a prefix 'apub'
+                private: 0x2bf4530 // base58Priv will have a prefix 'apriv'
+              },
+              pubKeyHash: 0x2D, // Addresses will begin with 'K'
+              wif: 0xaa // Network prefix for wif generation                
+            }
+          }
+        let ecpair = arkjs.ECPair.fromSeed(passphrase, kapuNetwork)
 
         let publicKey = ecpair.getPublicKeyBuffer().toString('hex')
         let address = ecpair.getAddress().toString('hex')
