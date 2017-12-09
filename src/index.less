@@ -9,6 +9,9 @@
 @full-grey: rgba(181, 183, 191, 1);
 @faded-blue: rgba(52, 95, 242, .72);
 @full-blue: rgba(52, 95, 242, 1);
+@faded-yellow: rgba(210, 188, 36, .72);
+@faded-yellow2: rgba(210, 188, 36, .30);
+@full-yellow: rgba(210, 188, 36, 1);
 
 @font-montserrat: {
   font-family: 'Montserrat', sans-serif;
@@ -114,7 +117,7 @@ entropy {
     }
 
     .btn:hover {
-      color: @full-blue;
+      color: @full-yellow;
       background: #fff;
       -webkit-box-shadow: 0 0 25px 0px @full-grey;
       -moz-box-shadow: 0 0 25px 0px @full-grey;
@@ -123,19 +126,19 @@ entropy {
 
     .btn_primary {
       margin-bottom: 30px;
-      background: @full-blue;
+      background: @full-yellow;
       color: #fff;
-      -webkit-box-shadow: 0 0 25px 0px @faded-blue;
-      -moz-box-shadow: 0 0 25px 0px @faded-blue;
-      box-shadow: 0 0 25px 0px @faded-blue;
+      -webkit-box-shadow: 0 0 25px 0px @faded-yellow;
+      -moz-box-shadow: 0 0 25px 0px @faded-yellow;
+      box-shadow: 0 0 25px 0px @faded-yellow;
     }
 
     .btn_primary:hover {
-      background: rgba(11, 62, 236, 1);
+      background: @full-yellow;
       color: #fff;
-      -webkit-box-shadow: 0 0 25px 0px @full-blue;
-      -moz-box-shadow: 0 0 25px 0px @full-blue;
-      box-shadow: 0 0 25px 0px @full-blue;
+      -webkit-box-shadow: 0 0 25px 0px @full-yellow;
+      -moz-box-shadow: 0 0 25px 0px @full-yellow;
+      box-shadow: 0 0 25px 0px @full-yellow;
     }
   }
 
@@ -181,7 +184,7 @@ entropy {
     }
 
     &.change, &.change-add-active, &.change-remove {
-      background-color: #1a23e7;
+      background-color: @faded-yellow2;
       transform: scale(1.1);
       color: #fff;
 
@@ -216,7 +219,7 @@ entropy {
 
   .progress-bar {
     background-image: none;
-    background-color: #1a23e7;
+    background-color: @faded-yellow2;
     -webkit-transition: none;
     -moz-transition: none;
     -ms-transition: none;
