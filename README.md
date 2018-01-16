@@ -1,7 +1,5 @@
-![KAPU-PAPERWALLET](https://i.imgur.com/VssZxFM.png)
-
 # KAPU Paper Wallet
-
+![KAPU-PAPERWALLET](https://i.imgur.com/VssZxFM.png)
 > Paper wallet generator for KAPU cryptocurrency.
 
 ## Getting Started
